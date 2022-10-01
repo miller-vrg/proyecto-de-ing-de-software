@@ -29,7 +29,6 @@ Nuestro software se caracteriza por la amplia disponibilidad, la atención inmed
 -	Los usuarios podrán interactuar con el software de tal forma que podrán gestionar los datos personales de manera autónoma.
 
 - Nuestro software pretende ser una herramienta eficiente a la hora de gestionar citas médicas para los diferentes pacientes que existen en la base de datos
-___
 
 **Se verán beneficiado:**
 
@@ -52,8 +51,8 @@ ___
 ___
 
 ## Autores
--Miler Vargas Mola [Linkedin]([https://www.youtube.com/](https://www.linkedin.com/in/miller-vargas-mola)) 
--Saray Lopez Tobinson
--Javier Herrera
--Andres Burgos
--Carlos Coneo
+- Miler Vargas Mola [Linkedin](https://www.linkedin.com/in/miller-vargas-mola) 
+- Saray Lopez Tobinson
+- Javier Herrera
+- Andres Burgos
+- Carlos Coneo
