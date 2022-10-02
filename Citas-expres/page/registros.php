@@ -38,6 +38,18 @@ AND id_medico = medicos.`user`;";
 </head>
 
 <body onload="print()">
+    <header>
+        <nav >
+            <ul>
+                <li onclick="location='home-usuario.html'; ">Inicio</li>
+                <li onclick="location='citas.html'">Calendario</li>
+                <li onclick="location='registros.php'">Reporte</li>
+                <li onclick="location='nosotros.html'">Nosotros</li>
+                <li onclick="location='contactanos.html'">Contactanos</li>
+                <li onclick="location='../'">Salir</li>
+            </ul>
+        </nav>
+    </header>
     <section class="container">
         <p>Reporte del señor(a) <b><?= $_SESSION['name'] ?></b>, identificado con el numero de cc: <b><?= $_SESSION['cc'] ?></b></p>
         <table BORDER CELLPADDING=10 CELLSPACING=0>
