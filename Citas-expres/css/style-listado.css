@@ -1,0 +1,129 @@
+
+:root{
+    --color-primary: #0099ff;
+    --color-secundario: #0039BC; 
+    --fondo: rgb(255,255,255,0.9);
+}
+body{
+    margin:0;
+    font-family: 'Quicksand', sans-serif;
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/fondo-2.jpg);
+    background-position: 50% 50%;
+}
+
+.contenedor{
+    margin: 0;
+    margin-top: 2%;
+    width: 90%;
+    height: 80%;
+    border-radius: 5mm;
+    display: flex;
+    background: var(--fondo);
+    border-radius: 18px;
+    box-shadow: 0px 0px 5px var(--color-primary);
+    overflow: auto;
+}
+
+.dias{
+    margin: 0;
+    margin-top: 5px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--fondo);
+    border-radius: 8px;
+    box-shadow: 1px 2px 5px var(--color-primary);
+
+}
+
+.chid{
+    flex-grow: 1;
+    width: 30px;
+    height: 4.5vh;
+    background: var(--color-secundario);
+    border:none;
+    border-radius: 8px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.chid p{
+    color:white;
+    font-weight: bold;
+}
+.chid:hover{
+    border: 1px solid var(--color-secundario);
+    background: #f9f9fa ;
+}
+
+.chid p:hover{
+    color:var(--color-secundario);
+}
+
+.b{
+    margin:0;
+    width: 5%;
+}
+
+.t{
+    width: 100%;
+    height: 100%;
+    border-radius: 5mm;
+    border: #0039BC;
+    overflow: hidden;
+}
+
+.c{
+    color: aliceblue;
+    background-color: #0039BC;
+    border:none;
+    text-align: center;
+    position: sticky;
+    top:0%;
+}
+
+.btn{
+    margin:0;
+    border:none;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+.buton{
+    margin:0;
+    background: none;
+    width: 150%;
+    height: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.buton img{
+    margin:0;
+    width:3vh;
+    border:none;
+   
+}
+
+.n{
+    width: 12px;
+}
+.retroceso {
+    font-size: 80px;
+    border-radius: 5mm;
+    background-color: blue;
+    border: 2mm black solid;
+}
