@@ -1,10 +1,8 @@
 # proyecto-de-ing-de-softwared
 ### ABP (Aprendizaje basado en problemas)
-___
 
 ## Definición
 Este documento pretende orientar el trabajo inicial del desarrollo de un producto de software, aclarando conceptos básicos que se manejan dentro del producto, describiendo específicamente algunas de las funcionalidades del mismo, identificando las necesidades del negocio, los objetivos de la aplicación y los usuarios que tendrán acceso al producto. Además de eso por medio de este documento se permite entender mejor el problema, organizando y estructurando la información que el cliente haya brindado. 
-___
 
 ## ALCANCE DEL PRODUCTO
 El producto de este proyecto a desarrollar se identificará con el nombre “**Citas Médicas Express**” centrados en la gestión fácil y rápida de citas.
@@ -37,7 +35,7 @@ Nuestro software se caracteriza por la amplia disponibilidad, la atención inmed
 -	Las pequeñas y grandes empresas del sector de la salud que adquieran el software.
 
 -	Los médicos especialistas independientes que compren el software.
-___
+
 
 **Se espera con este proyecto contribuir a:**
 
@@ -48,7 +46,7 @@ ___
 -	Monitorear el historial médico de los usuarios del sistema y así llevarles un control más oportuno.
 
 -	Control prematuro del historial clínico del paciente para así evitar futuras enfermedades.
-___
+
 
 ## Autores
 - Miler Vargas Mola [Linkedin](https://www.linkedin.com/in/miller-vargas-mola) 
