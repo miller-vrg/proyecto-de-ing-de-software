@@ -31,7 +31,7 @@ $direccion = $_SESSION['direccion'];
     <header>
         <nav >
             <ul>
-                <li onclick="location='home-usuario.html'; ">Inicio</li>
+                <li onclick="location='home-usuario.php'; ">Inicio</li>
                 <li onclick="location='citas.html'">Calendario</li>
                 <li onclick="location='registros.php'">Reporte</li>
                 <li onclick="location='nosotros.html'">Nosotros</li>
@@ -45,10 +45,10 @@ $direccion = $_SESSION['direccion'];
             <img class="img-user" src="../icons/usuario.png" alt="PERFIL">
             <h3><?= $name ?></h3>
             <div class="datos">
-                <p><b>Edad:</b> <br>22<?= $edad?></p>
-                <p><b>Email:</b> <br>miller<?= $email?></p>
-                <p><b>Telefono:</b> <br>3343<?= $telefono?></p>
-                <p><b>Dirección:</b> <br>majshd<?= $direccion?></p>
+                <p><b>Edad:</b> <br><?= $edad?></p>
+                <p><b>Email:</b> <br><?= $email?></p>
+                <p><b>Telefono:</b> <br><?= $telefono?></p>
+                <p><b>Dirección:</b> <br><?= $direccion?></p>
             </div>
             <button class="btn-editar btn-efect" type="submit">Editar</button>
         </form>

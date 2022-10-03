@@ -41,7 +41,7 @@ AND id_medico = medicos.`user`;";
     <header>
         <nav >
             <ul>
-                <li onclick="location='home-usuario.html'; ">Inicio</li>
+                <li onclick="location='home-usuario.php'">Inicio</li>
                 <li onclick="location='citas.html'">Calendario</li>
                 <li onclick="location='registros.php'">Reporte</li>
                 <li onclick="location='nosotros.html'">Nosotros</li>
