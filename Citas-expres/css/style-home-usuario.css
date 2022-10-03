@@ -1,10 +1,21 @@
 :root{
-    --color-primary: #0099ff;
-    --color-secundario: #0039BC; 
-    --fondo: rgba(255,255,255,0.8);
+    --fondo:#F5FAFD;
+    --border_light:#FFF;
+    --border_dark:#000;
+    --shadow_dark:rgba(192,207,217,.5);
+    --color_elemet_light:#378AE7;
+    --color_elemet_dark:#D6EBF4;
+    --color_font_light:#fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 body{
-    margin:0;
     font-family: 'Quicksand', sans-serif;
     width:100%;
     height:100vh;
@@ -14,307 +25,190 @@ body{
     align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../img/fondo-2.jpg);
-    background-position: 50% 50%;
+    background-image: url(../img/fondo.jpg);
 }
 
-nav{
-    margin:0;
-    width:100%;
-    height: 3%;
+header{
+    position: absolute;
+    width: 100%;
+    height:30px;
+    color: var(--color_elemet_light);
+    background-color: var(--fondo);
+}
+
+nav{margin-top: 5px;}
+ul{
+    list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    justify-content: space-evenly;
+    font-size: 12px;
 }
 
-nav .btn-nav{
-    margin:0;
-    margin-left: 2%;
-    width: 10%;
-    height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav .btn-nav .exit{
-    margin:0;
-    width:25%;
-    height:100%;
-}
-
-nav .btn-nav .registros{
-    margin:0;
-    width:25%;
-    height:100%;
-}
-
-nav .btn-nav .calendario{
-    margin:0;
-    width:25%;
-    height:100%;
-}
-
-.btn-nav img:hover{
-    border-radius: 8px;
-    box-shadow: 1px 2px 5px var(--color-primary);
-}
-
-.user{
-    margin:0;
-    width:35%;
-    display:flex;
-    
+ul li:hover{
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .container{
+    margin-top: 40px;
     width:90%;
-    height:90%;
+    height: 80%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tajeta-efect{
+    padding: 5%;
+    height:400px;
+    border-radius: 12px;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    
-
-}
-
-.card-user{
-    margin:0;
-    width:60%;
-    height:100%;
     background: var(--fondo);
-    border:1px solid var(--color-primary);
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 12px;
-    box-shadow: 0px 0px 5px  var(--color-primary);
-    overflow:hidden;
-
+    transition: 0.25s;
 }
+.card-user{width:220px;}
 
-.card-user img{
-    margin:0;
-    width:50%;
-    display:flex;
-    flex-direction: column;
-    overflow:hidden;
-}
+.img-user{width:50%;}
 
 .datos{
-    margin:0;
     align-self: flex-start;
 }
-
-.btn-editar{
-    margin:0;
-    margin-top:15%;
-    width:70%;
-    height:10%;
-    font-weight: bold;
-    border: none;
+.btn-efect{
     border:none;
     border-radius:8px;
-    background:var(--color-primary);
-    overflow:hidden;
+    color:var(--color_elemet_light);
+    background:var(--color_elemet_dark);
+    height:30px;
+    transition: 0.20s;
 }
 
-.btn-editar:hover{
-    border-radius: 8px;
-    border: 1px solid var(--color-primary);
-    background:white;
-    }
+.btn-editar{width:70%;}
 
-.tarjeta{
-    margin:0;
-    width:70%;
-    height:40%;
-    background: var(--fondo);
-    border:1px solid var(--color-primary);
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: space-between;
-    border-radius: 12px;
-    box-shadow: 0px 0px 5px  var(--color-primary);
-    padding:7%;
-    overflow:hidden;
+.btn-efect:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+    color: var(--color_font_light);
+    border: 1px solid var(--border_light);
+    background:var(--color_elemet_light);
+    box-shadow: 0px 0px 10px 5px var(--shadow_dark);
 }
 
-.tarjeta img{
-    width:100%;
-    height:15vh;
-    display:flex;
-    flex-direction: column;
-    border-radius: 12px;
-}
-
-.tarjetero1{
-    height:100%;
+.tarjetero{
+    padding: 5%;
+    position: relative;
+    width:90%;
+    height: 310px;
     display:flex;
     justify-content: center;
-
+    flex-wrap:wrap;
+    overflow: auto;
 }
 
-.tarjetero1 p{
-    margin:0;
-    text-align: justify;
-}
-
-.tarjetero2{
-    margin:0;
-    padding: 2%;
-    width:50%;
-    height:100%;
-    display:flex;
-    justify-content: space-between;
-    align-content: space-around;
-    flex-flow: column wrap; 
-}
-
-.tarjetero2 img{
-    width:10%;
-}
-
-.tarjetero2 p{
+.tarjetero p{
     font-size: 80%;
     text-align: justify;
 }
 
-.t2{
-    width:19vh;
-    height:40vh;
+.flechas-guia{
+    width: 20px;
+    height: 12px;
+    position: absolute;
+    top:50%;
+    left: 90%;
+    animation: guia 1s infinite;
+}
+
+@keyframes guia {
+    0%{height: 0px;}
+    35%{height: 12px;}
+    70%{height: 22px;}
+    100%{height: 32px;}
+}
+
+.flecha{
+    margin-left: 4px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
+    transition:0.25s;
+}
+
+.flecha1{
+    border-bottom: 3px solid rgba(0, 0, 0, .4);
+    border-left: 3px solid rgba(0, 0, 0, .4);
+}
+.flecha2{
+    border-bottom: 3px solid rgba(0, 0, 0, .6);
+    border-left: 3px solid rgba(0, 0, 0, .6);
+}
+.flecha3{
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+}
+
+
+.tarjeta{
+    margin-bottom:10px;
+    width:190px;
+}
+
+.tarjeta img{
+    width:100%;
+    height:100px;
     display:flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: space-between;
+    border-radius: 12px;
 }
 
-.t2  button{
-    margin:0;
-    width:100%;
-    height: 10%;
-    border:none;
-    justify-self: flex-end;
+.tarjeta button{
+    padding: 0 2%;
+    width: 100%;
     display:flex;
     justify-content: space-between;
-    border-radius: 8px;
-    background: var(--color-primary);
-    
 }
 
-.t2  button:hover{
-    border: 1px solid var(--color-primary);
-    background:white;
-}
+.tarjeta button h5{align-self: center;}
 
-.t2 button h5{
-    margin:0;
-    align-self: center;
-
-}
-
-.t2 button img{
-    margin:0;
+.tarjeta button img{
     width:20%;
     height:50%;
     align-self: center;
 }
 
-@media (min-width: 640px){
+.tajeta-efect:hover{
+    transform: scale(1.1);
+    border:2px solid var(--border_light);
+    box-shadow: 0px 0px 10px  var(--shadow_dark);
+}
 
-    nav{
-        height: 6%; 
-    }
-
-    .btn-nav{
-        width:5%;
-        height: 50%;
-    }
-    
-    .btn-nav .calendario{
-        margin:0;
-        width:45%;
-        height:100%;
-    }
-    
-    .btn-nav .registros{
-        margin:0;
-        width:45%;
-        height:95%;
-    }
+@media only screen and (min-width: 600px){
 
     .container{
-        margin:0;
         justify-content: center;
+        align-items: center;
         flex-direction: row;
-    }
-    
-    .tarjetero1{
-        margin:0;
-        width:40%;
-        height:100%;
     }
 
     .card-user{
-        width:70%;
-        height:100%;
+        width: 300px;
+        height: 400px;
+    }
+    .tarjetero{
+        padding: 2% 0;
+        margin: 0;
+        width: 55%;
+        height: 450px;
     }
 
-    .card-user img{
-       margin:0;
-       margin-top:8%;
-       width: 40%;
+    .tarjeta{
+        width: 250px;
+        height: 370px;
+        margin:10px;
     }
-    .datos p {
-        margin:0;
-        text-align: left;
-        margin:0;
-        margin-top: 7%;
-        margin-left:30%;
-    }
-    
-    .btn-editar{
-        margin-top:10%;
-        height:5%;
-    }
-
-    .tarjetero2{
-        margin:0;
-        width:52%;
-        height:100%;
-        align-content: space-around;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        overflow: hidden;
-    }
-
-    .tarjetero2 img{
-        width:100%;
-        height:35%;
-    }
-
-    .t2{
-        padding:2% 2% 2% 2%;
-        width:25%;
-        height:40%;
-    }
-
-    .t2  button{
-        justify-self: flex-end;
-    }
-    
-    .t2  h5{
-        margin:0;
-        margin-left: 5%;
-        justify-self: center;
-        align-self: center;
-    }
-    .t2 p{
-        font-size: 60%;
-    }
-
-
 }
 
 /*
@@ -328,7 +222,7 @@ nav .btn-nav .calendario{
     .t2 p{
         font-size: 48%;
     }
-    .tarjetero2 img{
+    .tarjetero img{
         width:33vh;
         height:15vh;
     }
