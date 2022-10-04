@@ -35,12 +35,22 @@ $row = mysqli_query($conexion, $sql);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet"> 
-
+    <script defer="defer" type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script defer="defer" nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    
+  <header>
+    <nav >
+        <ul>
+            <li onclick="location='home-usuario.php'; ">Inicio</li>
+            <li onclick="location='registros.php'">Reporte</li>
+            <li onclick="location='nosotros.html'">Nosotros</li>
+            <li onclick="location='contactanos.html'">Contactanos</li>
+            <li onclick="location='../'">Salir</li>
+        </ul>
+    </nav>
+  </header>
     <div class="padre">
-
             <div class="card-user">
                 <img src="../icons/usuario.png" alt="">
                 <h3><?= $name ?></h3>
@@ -58,22 +68,14 @@ $row = mysqli_query($conexion, $sql);
               <button class="btn-editar" onclick="location='./edit.php'"> Editar </button>
             </div>
         <div class="table">
-
             <table class="default" BORDER CELLPADDING=10 CELLSPACING=0 >
-
-
-
                 <tr>
-              
                   <th class="c n">N</th>
                   <th class="c paciente">Paciente</th>
                   <th class="c fecha">Fecha</th>
                   <th class="c hora">Hora</th>
                   <th class="c btn"></th>
-              
                 </tr>
-              
-
                 <?php 
                  $con = 0;
                   foreach ($row as $valor){
@@ -92,25 +94,11 @@ $row = mysqli_query($conexion, $sql);
                      <button name="accion" value="correcto"><img src="../icons/marca-de-verificacion.png" alt="Correcto"></button></button></ion-icon>
                      <button name="accion" value="correcto"><img src="../icons/cancelar.png" alt="Correcto"></button>
                     </td>
-  
-                
                   </tr>';
-
-
                   }
-
                 ?>
-                
-              
-              
             </table>
-
         </div>
-
     </div>
-    
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

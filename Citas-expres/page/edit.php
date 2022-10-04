@@ -31,23 +31,35 @@ $direccion = $_SESSION['direccion'];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../css/style-edit.css">
+    <script src="../js/function.js" defer="defer"></script>
 </head>
 <body>
-            <form action="<?= $ruta ?>"  class="card-user" >
-                    <img class="user" src="../icons/usuario.png" alt="PERFIL">
-                    <p id="title"><?= $name?></p>
-                    <div class="datos">
-                        <p id="subtitle">Telefono:</p>
-                        <input class="campos" name="telefono" min="30000000" max="3499999999" type="number" value="<?=$telefono?>" required>
-                        <p id="subtitle">Email: </p>
-                        <input class="campos" id="email" name="email" type="text" value="<?=$email?>" required>
-                        <p id="subtitle">Dirección: </p>
-                        <input class="campos" name="direccion" type="text" value="<?=$direccion?>" required>
-                    </div>
-                    <button class="btn-editar" id="editar" type="submit">Guadar</button>
-            </form>
-            <script src="../js/function.js">
-
-            </script>
+    <header>
+        <nav >
+            <ul>
+                <li onclick="location='home-usuario.php'; ">Inicio</li>
+                <li onclick="location='citas.html'">Calendario</li>
+                <li onclick="location='registros.php'">Reporte</li>
+                <li onclick="location='nosotros.html'">Nosotros</li>
+                <li onclick="location='contactanos.html'">Contactanos</li>
+                <li onclick="location='../'">Salir</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="<?= $ruta ?>"  class="main__card" >
+            <img class="user" src="../icons/usuario.png" alt="PERFIL">
+            <p id="main__card___title"><?= $name?></p>
+            <div class="card__datos">
+                <p id="datos__subtitle">Telefono:</p>
+                <input class="datos__campos" name="telefono" min="30000000" max="3499999999" type="number" value="<?=$telefono?>" required>
+                <p id="datos__subtitle">Email: </p>
+                <input class="datos__campos" id="email" name="email" type="text" value="<?=$email?>" required>
+                <p id="subtitle">Dirección: </p>
+                <input class="datos__campos" name="direccion" type="text" value="<?=$direccion?>" required>
+            </div>
+            <button class="card__boton" id="editar" type="submit">Guadar</button>
+    </form>
+    </main>
 </body>
 </html>

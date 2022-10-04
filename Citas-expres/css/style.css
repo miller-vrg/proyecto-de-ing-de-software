@@ -1,4 +1,3 @@
-
 :root{
     --fondo:#F5FAFD;
     --border_light:#FFF;
@@ -15,7 +14,34 @@
     box-sizing: border-box;
     overflow: hidden;
 }
-
+.box{
+    font-size: .8rem;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    position: absolute;
+    top:20px;
+    left: 20%;
+    overflow: hidden;
+    color: var(--color_elemet_light);
+}
+.latido{
+    width: 57px;
+    height: 27px;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    left: 180px;
+    width: 57px;
+    height: 30px;
+    background-color: var(--border_light);
+    animation: palpito 2s infinite linear reverse;
+}
+@keyframes palpito {
+    0%{left: 180px;}
+    100%{left: 120px;}
+}
 body{
     font-family: 'Quicksand', sans-serif;
     width:100%;
@@ -106,7 +132,6 @@ input{
 }
 
 @media (max-width: 640px){
-
     .container{
         width:90%;
         height: 350px;

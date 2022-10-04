@@ -1,19 +1,52 @@
-
 :root{
-    --color-primary: #0099ff;
-    --fondo: rgba(255,255,255,0.8);
+    --fondo:#F5FAFD;
+    --border_light:#FFF;
+    --border_dark:#000;
+    --shadow_dark:rgba(192,207,217,.5);
+    --color_elemet_light:#378AE7;
+    --color_elemet_dark:#D6EBF4;
+    --color_font_light:#fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 body{
     font-family: 'Quicksand', sans-serif;
     width:100%;
     height:100vh;
-    margin:0 auto;
-    display: grid;
-    place-items: center;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../img/fondo-2.jpg);
-    background-position: 50% 50%;
+    background-image: url(../img/fondo.jpg);
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    height:30px;
+    color: var(--color_elemet_light);
+    background-color: var(--fondo);
+}
+
+nav{margin-top: 5px;}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 12px;
+}
+
+ul li:hover{
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .padre{
@@ -25,34 +58,25 @@ body{
     align-items: center;
     overflow:hidden;
 }
-
 .card-user{
-    margin:0;
-    width:23%;
-    height:70%;
-    background: rgba(255, 255, 255, 0.8);
-    border:1px solid var(--color-primary);
+    width:300px;
+    padding: 2%;
+    height:400px;
+    border-radius: 12px;
     display:flex;
     flex-direction: column;
     align-items: center;
-    border:none;
-    border-radius: 12px;
-    box-shadow: 0 0 10px #00bdff;
-    overflow:hidden;
-
+    justify-content: space-between;
+    background: var(--fondo);
+    transition: 0.25s;
 }
 
 .card-user img{
-    margin:0;
-    margin-top: 5%;
-    width:40%;
-    height: 25%;
-    overflow:hidden;
+    width:50%;
 }
 
 .campo{
-    margin:0;
-    width:80%;
+    align-self: flex-start;
 }
 
 p{
@@ -61,18 +85,23 @@ p{
 }
 
 .btn-editar{
-    margin:0;
-    margin-top: 15%;
-    width:80%;
-    height:6%;
-    font-weight: bold;
-    border: none;
     border:none;
+    width: 70%;
     border-radius:8px;
-    background:var(--color-primary);
-    overflow:hidden;
+    color:var(--color_elemet_light);
+    background:var(--color_elemet_dark);
+    height:30px;
+    transition: 0.20s;
 }
 
+.btn-editar:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+    color: var(--color_font_light);
+    border: 1px solid var(--border_light);
+    background:var(--color_elemet_light);
+    box-shadow: 0px 0px 10px 5px var(--shadow_dark);
+}
 
 .table{
     margin: 0;
