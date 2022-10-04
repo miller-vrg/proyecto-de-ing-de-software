@@ -16,7 +16,7 @@ if($tipo == null){
 
 $sql = "SELECT * FROM citas,registros
 WHERE ( estado = 'Pendiente' AND id_medico = '{$user}' )
-AND citas.id  = registros.id";
+AND citas.id  =  id_citas;";
 
 $row = mysqli_query($conexion, $sql);
 
