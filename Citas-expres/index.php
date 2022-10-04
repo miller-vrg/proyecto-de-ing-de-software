@@ -16,6 +16,10 @@ $_SESSION['tipo'] = null;
 <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="object-fit">
+    <section class="box">
+        <h1><i>Citas expres</i></h1>
+        <img class="latido" src="/icons/latidos.png" alt="latidos">
+    </section>
     <section class="container object-fit">
         <img src="./img/login.png" alt="enfermera">
             <form action="./function/checkPassword.php" method="post" class="datos">
