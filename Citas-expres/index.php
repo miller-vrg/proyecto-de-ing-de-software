@@ -18,7 +18,7 @@ $_SESSION['tipo'] = null;
 <body class="object-fit">
     <section class="box">
         <h1><i>Citas expres</i></h1>
-        <img class="latido" src="/icons/latidos.png" alt="latidos">
+        <img class="latido" src="./icons/latidos.png" alt="latidos">
     </section>
     <section class="container object-fit">
         <img src="./img/login.png" alt="enfermera">
@@ -30,7 +30,7 @@ $_SESSION['tipo'] = null;
                         <input class="campos" name="password" type="password" placeholder="*****" minlength="8" maxlength="16" required>
                     </div>
                     <div class="botones">
-                        <button  type="button" class="btn registro" onclick= "location = './page/registrar-usuario.html'"><p>Registro</p></button>
+                        <button  type="button" class="btn registro" onclick= "location = './page/registrar-usuario.php'"><p>Registro</p></button>
                         <button type="submit" class="btn login"><p>Entrar</p></button>
                     </div>
             </form>
