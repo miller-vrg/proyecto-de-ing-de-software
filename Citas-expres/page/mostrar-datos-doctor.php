@@ -2,6 +2,11 @@
 session_start();
 require_once "../databases/conexion_db.php";
 
+$tipo = $_SESSION['tipo'];
+if($tipo == null){
+    header("location: ../");
+}
+
 $name = $_SESSION['name'];
 $espe = $_SESSION['espe'];
 $edad = $_SESSION['edad'];
@@ -9,10 +14,6 @@ $user = $_SESSION['user'];
 
 $telefono = $_SESSION['telefono'];
 
-$tipo = $_SESSION['tipo'];
-if($tipo == null){
-    header("location: ../");
-}
 
 $sql = "SELECT * FROM citas,registros
 WHERE ( estado = 'Pendiente' AND id_medico = '{$user}' )
@@ -44,8 +45,6 @@ $row = mysqli_query($conexion, $sql);
         <ul>
             <li onclick="location='home-usuario.php'; ">Inicio</li>
             <li onclick="location='registros.php'">Reporte</li>
-            <li onclick="location='nosotros.html'">Nosotros</li>
-            <li onclick="location='contactanos.html'">Contactanos</li>
             <li onclick="location='../'">Salir</li>
         </ul>
     </nav>
@@ -77,10 +76,12 @@ $row = mysqli_query($conexion, $sql);
                   <th class="c btn"></th>
                 </tr>
                 <?php 
-                 $con = 0;
+               
+                  $con = 0;
                   foreach ($row as $valor){
+                    $aux = $valor['id'];
                     $con++;
-                    echo '<tr>
+                    echo '<tr class="ttrr">
               
                     <td>'. $con.' </td>
                 
@@ -88,15 +89,21 @@ $row = mysqli_query($conexion, $sql);
                 
                     <td>'.  explode(" ", $valor['fecha_cita'])[0].' </td>
   
-                    <td>'.  explode(" ", $valor['fecha_cita'])[1].' </td>
-
+                    <td>'.  explode(" ", $valor['fecha_cita'])[1].' </td>';
+                    echo <<<trrr
                     <td id="btns">
-                     <button name="accion" value="correcto"><img src="../icons/marca-de-verificacion.png" alt="Correcto"></button></button></ion-icon>
-                     <button name="accion" value="correcto"><img src="../icons/cancelar.png" alt="Correcto"></button>
+                    <a href="../function/cambiar_estado.php?data=ASISTIDA&id=$aux" class="buton" type="submit">
+                    <img src="../icons/marca-de-verificacion.png" alt="Correcto">
+                    </a>
+                    <a href="../function/cambiar_estado.php?data=NO_ASISTIDA&id=$aux" class="buton" type="submit">
+                    <img src="../icons/cancelar.png" alt="Correcto">
+                    </a>
                     </td>
-                  </tr>';
+                  </tr>'
+trrr;
                   }
-                ?>
+                
+                ?> 
             </table>
         </div>
     </div>

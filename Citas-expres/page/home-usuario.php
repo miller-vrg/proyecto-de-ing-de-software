@@ -34,8 +34,6 @@ $direccion = $_SESSION['direccion'];
                 <li onclick="location='home-usuario.php'; ">Inicio</li>
                 <li onclick="location='citas.php'">Calendario</li>
                 <li onclick="location='registros.php'">Reporte</li>
-                <li onclick="location='nosotros.html'">Nosotros</li>
-                <li onclick="location='contactanos.html'">Contactanos</li>
                 <li onclick="location='../'">Salir</li>
             </ul>
         </nav>

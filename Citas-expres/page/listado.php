@@ -14,7 +14,7 @@ if ($tipo == null) {
 
 $sql = "SELECT tipo,estado FROM citas,registros
 WHERE ( tipo = '" . $ex . "' AND id_user = '" . $user . "' AND id_citas = citas.id) 
- AND ( estado = 'Pendiente' OR estado = 'Asistida' );";
+ AND ( estado = 'Pendiente' );";
 $row = mysqli_query($conexion, $sql);
 
 if (mysqli_num_rows($row) > 0) {
@@ -54,8 +54,6 @@ if (mysqli_num_rows($row) > 0) {
                 <li onclick="location='home-usuario.php'; ">Inicio</li>
                 <li onclick="location='citas.php'">Calendario</li>
                 <li onclick="location='registros.php'">Reporte</li>
-                <li onclick="location='nosotros.html'">Nosotros</li>
-                <li onclick="location='contactanos.html'">Contactanos</li>
                 <li onclick="location='../'">Salir</li>
             </ul>
         </nav>
@@ -78,7 +76,7 @@ if (mysqli_num_rows($row) > 0) {
                 $auxi2 = @strtotime("+2 hour", $auxi2);
 
 
-                @$final = date("17:40:00");
+                @$final = date("21:40:00");
                 if ($auxi2 >= @strtotime($final) && !isset($_REQUEST["au"])) {
                     echo "<th style='width: 100%; text-align: center center; colspan='5'><H1> A esta hora usted ya no tiene citas disponibles para hoy </H1></th>";
                 } else {
@@ -101,7 +99,7 @@ tt;
                     $fecha_au = date("d-m-Y");
                 }
 
-                for ($i = 1; $i <= 36; $i++) {
+                for ($i = 1; $i <= 48; $i++) {
 
                     @$auxi = strtotime('+20 minute', $auxi);
                     $hora = @date('H:i:s', $auxi);
