@@ -15,5 +15,6 @@ document.getElementById("email").addEventListener("input", function() {
         validacion.style = "color:red;";
         buttonEditar.disabled=true;
         buttonRegistro.disabled=true;
+        //reintegrando
     }
 });
